@@ -1,0 +1,109 @@
+/* COLORS ======= */
+
+$white: #FFF;
+$black: #000;
+$dark-grey: #252525;
+$medium-grey: #656565;
+$light-grey: #EEEEEE;
+$red: #FF4000;
+$green: #086100;
+
+/* EMS ======= */
+
+@function em($target, $context: 16) {
+    @return ($target / $context) * 1em;
+}
+
+@mixin full-bleed-background{
+background-position:50% 0;
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+@mixin quarter-second-transition{
+-webkit-transition-duration: .25s;
+-moz-transition-duration: .25s;
+-ms-transition-duration: .25s;
+-o-transition-duration: .25s;
+transition-duration: .25s;
+}
+
+@mixin one-em-border-radius{
+-webkit-border-radius: 1em;
+-moz-border-radius: 1em;
+-ms-border-radius: 1em;
+-o-border-radius: 1em;
+border-radius:1em;
+}
+
+@mixin drop-shadow{
+-webkit-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+-moz-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+-ms-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+-o-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+}
+
+@mixin text-emboss{
+text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+-webkit-text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+-moz-text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+-ms-text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+-o-text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+filter: dropshadow(color=#ffffff, offx=1, offy=1);
+}
+
+@mixin text-shadow{
+text-shadow: 2px 2px 5px rgba(0,0,0,0.95);
+-webkit-text-shadow: 2px 2px 5px rgba(0,0,0,0.95);
+-moz-text-shadow: 2px 2px 5px rgba(0,0,0,0.95);
+-ms-text-shadow: 2px 2px 5px rgba(0,0,0,0.95);
+-o-text-shadow: 2px 2px 5px rgba(0,0,0,0.95);
+filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+
+
+
+@mixin gradient-white-transparent{
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+
+
+}
