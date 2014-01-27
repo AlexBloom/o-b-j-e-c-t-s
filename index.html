@@ -329,7 +329,7 @@
 		
  		// Swap Text Descriptions on Scroll to New Div	
 	
- 		$(window).load(function () {
+ 		$(document).ready(function () {
  		    $(window).on("scroll resize", function () {
  		        var pos = $('#desc').offset();
  		        $('.object').each(function () {
@@ -344,18 +344,18 @@
  		        $(window).trigger('scroll'); // init the value
  		    
 
- 		});
+ 		
 		
 		
 		// Background Color Variables	 
 	   	 var colors = [
-	   	   [255, 255, 255], // White
-	   	   [67, 66, 255],    // Red
-	   	   [0, 255, 175],    // Green
-	   	   [254, 36, 0],    // Blue
-	   	   [174, 165, 255], // Lime
-	   	   [252, 219, 0], // Lime
-		   [255, 255, 255] // White
+	   	   [255, 255, 255], 	// White
+	   	   [67, 66, 255],   	// Blue
+	   	   [0, 255, 175],   	// Seafoam
+	   	   [254, 36, 0],    	// Red
+	   	   [174, 165, 255], 	// Purple
+	   	   [252, 219, 0],   	// Yellow
+		   [255, 255, 255]  	// White
 	   	 ];
  
 	   	 var height = $('body').height(); //- window.innerHeight;
@@ -382,16 +382,19 @@
    
 	   	    $("body").css('background-color', 'rgb('+ newRgb.join(',') +')');
 	   	 });
+		 
+		});
 
 		 $(window).resize(function() {
 		 		 
 		   	 var colors = [
-		   	   [255, 255, 255], // White
-		   	   [67, 66, 255],    // Red
-		   	   [0, 255, 175],    // Green
-		   	   [254, 36, 0],    // Blue
-		   	   [174, 165, 255], // Lime
-		   	   [252, 219, 0] // Lime
+		   	   [255, 255, 255], 	// White
+		   	   [67, 66, 255],   	// Blue
+		   	   [0, 255, 175],   	// Seafoam
+		   	   [254, 36, 0],    	// Red
+		   	   [174, 165, 255], 	// Purple
+		   	   [252, 219, 0],   	// Yellow
+			   [255, 255, 255]  	// White
 		   	 ];
 
 		   	 var height = $('body').height(); //- window.innerHeight;
