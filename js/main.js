@@ -1,15 +1,14 @@
 $(document).ready(function () {
-
 	// Fire LocalScroll
 	$('body').localScroll();
 
 	// Size Content to Window
-	$('.object').css({height:$(window).height()-100});
-	$('.swipe-wrap img').css({height:$(window).height()-100});
-	$('.info-block').css({height:$(window).height()-100});
-	$('.info-block').css({width:$('.swipe-wrap img').width()});
-	$('.object').css({'padding-top':$(window).height()-$('.swipe-wrap img').height()-50});
-	$('.object').css({'padding-bottom':$(window).height()-$('.swipe-wrap img').height()-50});
+	$('.object, .swipe-wrap img, .info-block').css({height:$(window).height()-100});
+	//$('.swipe-wrap img').css({height:$(window).height()-100});
+	//$('.object').css({'padding-top':$(window).height()-$('.swipe-wrap img').height()-50});
+	//$('.object').css({'padding-bottom':$(window).height()-$('.swipe-wrap img').height()-50});
+	//$('.info-block').css({height:$(window).height()-100});
+	
 	
 	// Fire Swipe Action with jQuery
 	window.Williams = $('#Williams').Swipe().data('Swipe');
@@ -67,6 +66,9 @@ $(document).ready(function () {
 	 });
 });
 
+$("#first-object").load(function () {
+	$('.info-block').css({width:$('#first-object').width()});
+});
 
 $(window).resize(function() {
 	// Resize Objects to Window Adjustments
