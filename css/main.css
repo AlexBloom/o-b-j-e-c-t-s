@@ -136,6 +136,8 @@ a {
 .info-block {
   background: black;
   margin: 0 auto;
+  width: 80%;
+  height: 80%;
   color: white;
   position: relative;
   z-index: 5000; }

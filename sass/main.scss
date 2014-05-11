@@ -197,21 +197,18 @@ a{
 	margin-bottom:-2em;
 }
 
-
-
-
 .info-block{
 	background:$black;
 	margin:0 auto;
+	width:80%;
+	height:80%;
 	color:$white;
 	position:relative;
-	z-index:5000;
-	
+	z-index:5000;	
 	.content-wrap{
 		padding:1.5em 3em;
 		line-height:175%;
 	}
-	
 	a{
 		text-decoration:underline;
 		color:$white;
